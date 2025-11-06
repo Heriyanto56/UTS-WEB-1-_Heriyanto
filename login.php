@@ -23,4 +23,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 }
 ?>
-<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+    <title>login</title>
+</head>
+<body>
+<h2>Form Login</h2>
+    <?php if (!empty($error)) echo"<p style='color:red;'>$error</p>"; ?>
+<Form metho="post">
+    username: <input type="text" name="username" required><br><br>
+    password: <input type="pasword" name="pasword" required><br><br>
+    <buttton type="submit">login</button>
+</form>
+</body>
+</html>
