@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $password = $_POST['password'] ?? '';
 
     // Login sederhana (username: admin, password: 123)
-    if ($username == 'admin' && $password == '123') {
+    if ($username == 'heri' && $password == '123') {
         $_SESSION['username'] = $username;
         $_SESSION['role'] = 'Dosen';
         header("Location: dashboard.php");
@@ -30,10 +30,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <body>
 <h2>Form Login</h2>
     <?php if (!empty($error)) echo"<p style='color:red;'>$error</p>"; ?>
-<Form metho="post">
+<Form method="post">
     username: <input type="text" name="username" required><br><br>
-    password: <input type="pasword" name="pasword" required><br><br>
-    <buttton type="submit">login</button>
+    password: <input type="pasword" name="password" required><br><br>
+    <button type="submit">LOGIN</button>
 </form>
 </body>
 </html>
